@@ -1,0 +1,28 @@
+{
+  "name": "@freeloop/aleo-tools",
+  "version": "0.0.0",
+  "description": "JS libs.",
+  "scripts": {
+    "build": "rm -rf ./dist && unbuild",
+    "release": "npm run build && changelogen --release && npm publish --access public && git push --follow-tags"
+  },
+  "keywords": [],
+  "author": "zh-kai",
+  "license": "MIT",
+  "devDependencies": {
+    "changelogen": "^0.5.5",
+    "typescript": "^5.3.3",
+    "unbuild": "^2.0.0"
+  },
+  "type": "module",
+  "main": "dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs"
+    }
+  }
+}
